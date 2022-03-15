@@ -1,6 +1,6 @@
 class PostImagesController < ApplicationController
   def new
-    @post_image = PostImage.new #ここは1つの空モデルを作成するのでPostImagesではなくPostImageの単数
+    @post_image = PostImage.new #ここは1つの空モデルを作成するのでPostImageの単数
   end
 
   def create
@@ -11,6 +11,7 @@ class PostImagesController < ApplicationController
   end
 
   def index
+    @post_images = PostImage.all
   end
 
   def show
